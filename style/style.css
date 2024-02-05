@@ -1,0 +1,79 @@
+body {
+	background-color: rgb(35, 181, 79);
+	font-family: sans-serif;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#scoreboard {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: space-around;
+	color: antiquewhite;
+}
+
+#score-wrapper {
+	font-weight: bold;
+	color: antiquewhite;
+}
+
+#score-wrapper p{
+	margin: left 100px;
+
+}
+#canvas {
+	background-image: url(/img/back.png);
+	display: block;
+	border: 2px solid black;
+}
+
+#character {
+	display: none;
+}
+
+#obstacle {
+	display: none;
+}
+
+#background {
+	display: none;
+}
+
+
+.game-over-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #3498db; 
+    color: #fff; 
+    border: 2px solid #2980b9;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.game-over-popup p {
+    margin: 0 0 10px;
+}
+
+.game-over-popup button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2ecc71; 
+    color: #fff; 
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.game-over-popup button:hover {
+    background-color: #27ae60; 
+}

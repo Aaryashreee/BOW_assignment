@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="style/style.css" />
+		<title>Bird And Bug</title>
+	</head>
+	<body>
+		<div id="scoreboard">
+			<h1 id="name">Bird And Bug</h1>
+			<div id="score-wrapper">
+				<p>SCORE:<span id="score">0 </span></p>
+				<p>LEVEL: <span id="level">1 </span></p>
+				<p>HIGH SCORE: <span id="high-score">0 </span></p>
+				
+			</div>
+		</div>
+
+		<canvas id="canvas" width="1500" height="600"></canvas>
+
+		<img src="img/bug.gif" alt="" id="character" />
+		
+		<audio id="gameplayMusic" loop>
+			<source src="music/gameplay.mp3" type="audio/mp3">
+		</audio>
+		
+		<audio id="gameOverMusic">
+			<source src="music/gameover.mp3" type="audio/mp3">
+		</audio>
+		<script src="js/script.js"></script>
+	</body>
+</html>
