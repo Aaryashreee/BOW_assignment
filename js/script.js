@@ -17,12 +17,10 @@ let isGameOver = false;
 
 // animation character
 const character = document.getElementById("character");
-
 let player = {
-    w: SIZE  ,
+    w: 80  ,
     h: SIZE,
-    displayWidth: SIZE,
-    x: 0,
+    x: 100,
     y: Math.floor(Math.random() * (CANVAS_HEIGHT / SIZE)) * SIZE,
     speed: 0.09,
     progress: 0,
@@ -41,13 +39,13 @@ function spawnObstacle() {
     obstacleImage.src = `img/bird1.png`;
 
     const newObstacle = {
-        w: SIZE /2 ,
+        w: SIZE /3 ,
         h: SIZE,
         displayWidth: SIZE - SIZE * 0.5,
         displayHeight: SIZE - SIZE * 0.5,
         x: CANVAS_WIDTH + Math.floor(Math.random() * (ROW_WIDTH / SIZE)) * SIZE,
         y: 0,
-        speed: 0.09  + level * 0.01,
+        speed: 0.05  + level * 0.04,
     };
             if (newObstacle.x > CANVAS_WIDTH) {
                
@@ -78,17 +76,13 @@ function updateObstacles() {
 }
 
 function drawPlayer() {
-    // gifImage.onload = function () {
-    let displayX = player.x + 40 ;
-   
-
-    // let displayw = SIZE /2;
+    const playerImage = new Image();
+     playerImage.src = `img/bug2.png `;
+    let displayX = player.x ;
     ctx.drawImage(character, displayX, player.y, player.w, player.h);
-    
-    
     // ctx.strokeStyle = "blue";
     // ctx.strokeRect(
-    //     player.x ,
+    //     player.x  ,
     //     player.y,
     //     player.w,
     //     player.h
@@ -213,7 +207,7 @@ function checkCollision() {
             }
         } else {
             // Player successfully avoided obstacle, increase score
-            score= score + 0.03;
+            score= score + 0.04;
         }
     }
     

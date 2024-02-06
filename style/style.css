@@ -26,7 +26,7 @@ body {
 
 }
 #canvas {
-	background-image: url(/img/back.png);
+    background-image: url(../img/back.png);
 	display: block;
 	border: 2px solid black;
 }
