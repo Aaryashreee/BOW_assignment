@@ -80,13 +80,7 @@ function drawPlayer() {
      playerImage.src = `img/bug2.png `;
     let displayX = player.x ;
     ctx.drawImage(character, displayX, player.y, player.w, player.h);
-    // ctx.strokeStyle = "blue";
-    // ctx.strokeRect(
-    //     player.x  ,
-    //     player.y,
-    //     player.w,
-    //     player.h
-    // );
+
 }
  
 function drawObstacles() {
@@ -104,14 +98,6 @@ function drawObstacles() {
             obstacles[i].displayWidth,
             obstacles[i].displayHeight
         );
-
-        // ctx.strokeStyle = "red";
-        // ctx.strokeRect(
-        //     obstacles[i].x,
-        //     obstacles[i].y,
-        //     obstacles[i].w,
-        //     obstacles[i].h
-        // );
     }
 }
 function drawElectricPole(x, y, height) {
@@ -222,7 +208,6 @@ function updateScoreDisplay() {
     if (score >= 100 * (level + 1)) {
         // Increase the level by 1
         level++;
-        console.log("Level Up! Current Level: " + level);
     }
 
     }
